@@ -1,0 +1,14 @@
+<p>
+  text works!
+</p>
+
+<form>
+  <label for="search">Search</label>
+  <input type="text" #textPostSearch>
+  <button (click)="showTextPosts(textPostSearch.value)">Get Text Posts</button>
+</form>
+
+
+<div *ngIf="texts">
+  <app-text-list [childTexts]="texts"></app-text-list>
+</div>
