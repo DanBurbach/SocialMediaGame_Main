@@ -6,6 +6,9 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { VideoComponent } from './video/video.component';
 
+//services
+import { YoutubeService} from './youtube.service'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +19,7 @@ import { VideoComponent } from './video/video.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [YoutubeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

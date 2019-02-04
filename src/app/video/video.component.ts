@@ -6,33 +6,15 @@ import { YoutubeService} from '../youtube.service'
   selector: 'app-video',
   templateUrl: './video.component.html',
   styleUrls: ['./video.component.css'],
-  providers: [ YoutubeService]
+  providers: [YoutubeService]
 })
 export class VideoComponent {
-  videos: any[] = null;
+  videos: any[]= null;
+  constructor(private search: YoutubeService) { }
 
-
-  constructor(private video: YoutubeService) { }
-
-  getVideo(keyword: string) {
-    this.video.getVideoByKeyword(keyword).subscribe(response => {
+  getVideo(keyword:string){
+    this.search.getByKeyword(keyword).subscribe(response => {
       this.videos = response.json();
-      console.log(response)
-    })
-  }
-
-
-}
-
-
-export class WeatherComponent {
-
-  infos: any[]=null;
-  constructor(private humidity: WeatherApiService) { }
-
-  getHumidity(city: string){
-    this.humidity.getByCity(city).subscribe(response => {
-      this.infos = response.json();
       console.log(response)
     });
   }
