@@ -8,6 +8,6 @@ export class YoutubeService {
 
   constructor(private http: Http) { }
 
-  getByKeyword(keyword: string) {return this.http.get(`https://www.googleapis.com/youtube/v3/search?maxResults=25&part=snippet&key=${youtubeAPI.apiKey}`)
+  getByKeyword(keyword: string) {return this.http.get(`https://www.googleapis.com/youtube/v3/search?maxResults=25&part=snippet&totalResults=25&key=${youtubeAPI.apiKey}`)
   }
 }

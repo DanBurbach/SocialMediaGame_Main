@@ -15,7 +15,8 @@ export class VideoComponent {
   getVideo(keyword:string){
     this.search.getByKeyword(keyword).subscribe(response => {
       this.videos = response.json();
-      console.log(response)
+      this.videos = Array.of(this.videos);
+      console.log(this.videos);
     });
   }
 }

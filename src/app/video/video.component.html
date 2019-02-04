@@ -1,3 +1,21 @@
-<p>
-  video works!
-</p>
+<form>
+  <div class="form-group">
+    <label for="keyword">Keyword</label>
+    <input type=text #keyword >
+  </div>
+  <button (click)="getVideo(keyword.value)">Get Videos</button>
+</form>
+
+<div class="displyVideos" *ngFor="let video of videos">
+    <p>kinds: {{video.kind}}</p>
+    <p>item: {{video.items}}</p>
+    <p>snippet: {{video.items[0].snippet}}</p>
+    <p>channel: {{video.items[0].snippet.channelId}}</p>
+    <iframe width="420" height="315"
+      src="https://www.youtube.com/embed/A2FsgKoGD04">
+    </iframe>
+    <p>video: {{video.items[0].snippet.thumbnails.default.url}}</p>
+    <p>video: {{video.items[0].id.videoId}}</p>
+
+
+</div>
