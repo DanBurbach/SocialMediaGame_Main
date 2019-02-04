@@ -14,13 +14,13 @@ export class LogInComponent {
   private userName: String;
 
   constructor(public authService: AuthenticationService,
-    // private router: Router
+    // private router: Router,
   )
     {
       this.authService.user.subscribe(user => {
         if (user == null) {
           this.isLoggedIn = false;
-          // this.router.navigate(['']);
+          // this.router.navigate([]);
         } else {
           this.isLoggedIn = true;
           this.userName = user.displayName;
@@ -36,14 +36,5 @@ export class LogInComponent {
   logout() {
     this.authService.logout();
   }
-  
-    // Get the modal
-    // var modal = document.getElementById('id01');
 
-    // When the user clicks anywhere outside of the modal, close it
-  //   window.onclick = function(event) {
-  //   if (event.target == modal) {
-  //     modal.style.display = "none";
-  //   }
-  // }
 }
