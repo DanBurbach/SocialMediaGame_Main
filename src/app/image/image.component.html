@@ -1,3 +1,13 @@
 <p>
   image works!
 </p>
+<form>
+  <label for="search">Search</label>
+  <input type="text" #imagePostSearch>
+  <button (click)="showImagePosts(imagePostSearch.value)">Get Image Posts</button>
+</form>
+
+
+<div *ngIf="images">
+  <app-image-list [childImages]="images"></app-image-list>
+</div>
