@@ -7,12 +7,16 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { TextComponent } from './text/text.component';
 import { TextListComponent } from './text-list/text-list.component';
+import { ImageComponent } from './image/image.component';
+import { ImageListComponent } from './image-list/image-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TextComponent,
-    TextListComponent
+    TextListComponent,
+    ImageComponent,
+    ImageListComponent
   ],
   imports: [
     BrowserModule,
