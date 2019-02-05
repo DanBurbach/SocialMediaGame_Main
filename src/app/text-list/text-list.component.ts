@@ -20,4 +20,8 @@ export class TextListComponent {
     this.textApiPosts.addText(newTextToSave);
   }
 
+  deleteText(textPost: string){
+    return textPost = "";
+  }
+
 }

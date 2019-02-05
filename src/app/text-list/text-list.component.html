@@ -1,5 +1,5 @@
 
 <div *ngFor="let text of childTexts.result">
   <p>{{text.value}}</p>
-  <button (click)="saveText(text.value)">Save Text</button>
+  <button (click)="saveText(text.value); text.value='Posted and Saved!'">Save Text</button>
 </div>
