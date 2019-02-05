@@ -17,7 +17,6 @@ export class ImageComponent {
   showImagePosts(search: string) {
     this.imageApiPosts.getImagePost(search).subscribe(response => {
         this.images = response.json();
-        console.log(this.images);
     });
 
   }

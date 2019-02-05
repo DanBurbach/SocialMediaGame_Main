@@ -17,7 +17,6 @@ export class ImageListComponent {
 
   saveImage(imageURL: string, imageTags: string){
     let newImageToSave: ImagePost = new ImagePost(imageURL, imageTags);
-    console.log(newImageToSave);
     this.imageApiPosts.addImage(newImageToSave);
   }
 
