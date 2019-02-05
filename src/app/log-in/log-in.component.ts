@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-// import { Router, RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { AuthenticationService } from '../authentication/authentication.service';
 
 @Component({
@@ -14,17 +14,17 @@ export class LogInComponent {
   private userName: String;
 
   constructor(public authService: AuthenticationService,
-    // private router: Router,
+    private router: Router,
   )
     {
       this.authService.user.subscribe(user => {
         if (user == null) {
           this.isLoggedIn = false;
-          // this.router.navigate([]);
+          this.router.navigate([]);
         } else {
           this.isLoggedIn = true;
           this.userName = user.displayName;
-          // this.router.navigate([]);
+          this.router.navigate(['app-private']);
         }
       });
     }
