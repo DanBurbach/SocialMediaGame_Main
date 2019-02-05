@@ -10,8 +10,39 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
 
-#id01 {
-  z-index: 9999;
+/* top navigation bar for login page =========================== */
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #111;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #333;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right,
+  ul.topnav li {float: none;}
+}
+
+ul.topnav .loginName {
+  float: right;
 }
 
 /* Set a style for all buttons */
@@ -19,14 +50,13 @@ button {
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
   border: none;
   cursor: pointer;
   width: 100%;
 }
 
 button:hover {
-  opacity: 1;
+  opacity: 0.8;
 }
 
 input[type=submit] {
@@ -86,6 +116,11 @@ span.psw {
   border: 1px solid #888;
   padding: 15px;
   width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* set depth of modal */
+#id01 {
+  z-index: 9999;
 }
 
 /* The Close Button (x)=========================================== */
@@ -180,7 +215,7 @@ input[type=submit]:hover {
 
 .carousel {
   width:100%;
-  max-height: 750px;
+  max-height: 500px;
   margin: auto;
 }
 

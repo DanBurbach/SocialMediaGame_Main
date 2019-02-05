@@ -1,13 +1,11 @@
-<ul class="nav navbar-nav navbar-right">
-  <li *ngIf="isLoggedIn">
-    <a>{{userName}}</a>
-    <a (click)="logout()">Log out</a>
-  </li>
-</ul>
-<!-- login modal splash page ======================================= -->
-
 <body>
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+  <ul class="topnav">
+    <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></li>
+    <div class="loginName"*ngIf="isLoggedIn">
+      <li><a>{{userName}}</a></li>
+      <li><a (click)="logout()">Log out</a></li>
+    </div>
+  </ul>
 
 <div id="id01" class="modal">
 
@@ -59,8 +57,8 @@
       </div>
     </form>
 
-</div>
-<body>
+  </div>
+</body>
 
 
 <!-- carousel below ======================================- -->
@@ -77,7 +75,7 @@
 
     <div class="carousel-inner">
       <div class="item active">
-        <img src="/assets/images/text-carousel.jpg">
+        <img src="/assets/images/text-carousel.png">
           <div class="carousel-caption">
             <h3>Focus on your Text</h3>
             <p>Communication is our core. Yours too! Write posts, stories, poetry, rhymes, music, or anything that is just on your mind that you wish to share with the world.</p>
@@ -85,7 +83,7 @@
       </div>
 
       <div class="item">
-      <img src="/assets/images/images-carousel.jpeg">
+      <img src="/assets/images/images-carousel.gif">
         <div class="carousel-caption">
           <h3>Sift through thousands of images</h3>
           <p>Find your favorite pictures and upload your own. Create a full library of images that inspire, motivate, and show who you are!</p>
@@ -93,7 +91,7 @@
     </div>
 
     <div class="item">
-      <img src="/assets/images/videos-carousel.jpeg">
+      <img src="/assets/images/videos-carousel.png">
         <div class="carousel-caption">
           <h3>Directly connected with YouTube</h3>
           <p>We have a direct connection with YouTube so that you don't fall out of the loop of what is new and happening in the world.</p>
@@ -109,7 +107,7 @@
     </div>
 
     <div class="item">
-      <img src="/assets/images/score-carousel.jpeg">
+      <img src="/assets/images/score-carousel.jpg">
         <div class="carousel-caption">
           <h3>Post To Make More</h3>
           <p>By posting your own content, you add to the community and we want to reward that with points. Upvote, downvote, or reply... it's all part of the Game!</p>
