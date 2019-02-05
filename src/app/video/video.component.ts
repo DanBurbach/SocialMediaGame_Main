@@ -1,17 +1,19 @@
 import { Component} from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { YoutubeService} from '../youtube.service'
+import { YoutubeService} from '../youtube.service';
+import { VideoPost } from '../models/video-post';
+import { VideoFbService } from '../video-fb.service';
 
 @Component({
   selector: 'app-video',
   templateUrl: './video.component.html',
   styleUrls: ['./video.component.css'],
-  providers: [YoutubeService]
+  providers: [YoutubeService, VideoFbService]
 })
 export class VideoComponent {
   videos: any[]= null;
   clickedVideo: null;
-  constructor(private search: YoutubeService) { }
+  constructor(private search: YoutubeService, private videoFb:VideoFbService) { }
 
 
 // gets the API by items
@@ -39,4 +41,9 @@ export class VideoComponent {
       iframe.setAttribute("src", url);
       document.getElementById("watch").appendChild(iframe);
     }
+
+  saveVideo(videoId: string, title: string){
+   let newVideoToSave: VideoPost = new VideoPost(videoId, title);
+   this.videoFb.addVideo(newVideoToSave);
+ }
 }

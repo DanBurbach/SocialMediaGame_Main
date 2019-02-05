@@ -1,17 +1,20 @@
-<form>
-  <div class="form-group">
-    <label for="keyword">Search Videos</label>
-    <input type=text #keyword >
-    <button (click)="getVideo(keyword.value)">Get Videos</button>
+<div class="container">
+  <h2>Video Feeds</h2>
+  <form>
+    <div class="form-group">
+      <label for="keyword">Search Videos</label>
+      <input type=text #keyword >
+      <button (click)="getVideo(keyword.value)">Get Videos</button>
+    </div>
+  </form>
+
+  <div class="displayVideos" *ngFor="let video of videos">
+    <div *ngFor="let info of video">
+      <p>{{info.snippet.title | json}}<button (click)="watchVideo(info.id.videoId)">Watch</button></p>
+      <button (click)="saveVideo(info.id.videoId)">Save Videos</button>
+    </div>
   </div>
-</form>
 
-<div class="displyVideos" *ngFor="let video of videos">
-  <div *ngFor="let info of video">
-    <p>{{info.snippet.title | json}}<button (click)="watchVideo(info.id.videoId)">Watch</button></p>
+  <div id="watch">
   </div>
-</div>
-
-<div id="watch">
-
 </div>
