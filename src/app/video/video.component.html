@@ -1,30 +1,17 @@
 <form>
   <div class="form-group">
-    <label for="keyword">Keyword</label>
+    <label for="keyword">Search Videos</label>
     <input type=text #keyword >
+    <button (click)="getVideo(keyword.value)">Get Videos</button>
   </div>
-  <button (click)="getVideo(keyword.value)">Get Videos</button>
 </form>
-
-<!-- <div class="displyVideos" *ngFor="let video of videos">
-    <p>kinds: {{video.kind}}</p>
-    <p>item: {{video.items}}</p>
-    <p>snippet: {{video.items[0].snippet}}</p>
-    <p>channel: {{video.items[0].snippet.channelId}}</p>
-    <iframe width="420" height="315"
-      src="https://www.youtube.com/embed/A2FsgKoGD04">
-    </iframe>
-    <p>video: {{video.items[0].snippet.thumbnails.default.url}}</p>
-    <p>video: {{video.items[0].id.videoId}}</p>
-    <p>video: {{video.items[1].id.videoId}}</p>
-    <p>video: {{video.items[2].id.videoId}}</p>
-</div> -->
 
 <div class="displyVideos" *ngFor="let video of videos">
   <div *ngFor="let info of video">
-      <p>{{info.snippet.title | json}}</p>
-      <p>{{info.id.videoId | json}}</p>
+    <p>{{info.snippet.title | json}}<button (click)="watchVideo(info.id.videoId)">Watch</button></p>
   </div>
-  <p>{{video[i].snippet.title| json}}</p>
-  <p>{{video[i].id.videoId | json}}</p>
+</div>
+
+<div id="watch">
+
 </div>

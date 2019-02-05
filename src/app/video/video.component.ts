@@ -10,6 +10,7 @@ import { YoutubeService} from '../youtube.service'
 })
 export class VideoComponent {
   videos: any[]= null;
+  clickedVideo: null;
   constructor(private search: YoutubeService) { }
 
 
@@ -22,15 +23,20 @@ export class VideoComponent {
     });
   }
 
-  getVideoAll(keyword:string){
-    this.search.getByKeyword(keyword).subscribe(response => {
-      this.videos = response.json();
-      this.videos = Array.of(this.videos);
-      console.log(this.videos);
-    });
-  }
+  // getVideoAll(keyword:string){
+  //   this.search.getByKeyword(keyword).subscribe(response => {
+  //     this.videos = response.json();
+  //     this.videos = Array.of(this.videos);
+  //     console.log(this.videos);
+  //   });
+  // }
 
-  createVideoUrl(){
-    alert("Hello does this work!?")
-  }
+  watchVideo(info){
+    var url = "https://www.youtube.com/embed/" + info;
+    var iframe = document.createElement('iframe');
+      iframe.width="500px";
+      iframe.height="450px";
+      iframe.setAttribute("src", url);
+      document.getElementById("watch").appendChild(iframe);
+    }
 }

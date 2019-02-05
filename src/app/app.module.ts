@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { VideoComponent } from './video/video.component';
 
 //services
-import { YoutubeService} from './youtube.service'
+import { YoutubeService} from './youtube.service';
 
 @NgModule({
   declarations: [
