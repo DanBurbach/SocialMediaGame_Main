@@ -16,12 +16,7 @@ export class TextListComponent {
 
   saveText(textPost: string){
     let newTextToSave: TextPost = new TextPost(textPost);
-    console.log(newTextToSave);
     this.textApiPosts.addText(newTextToSave);
-  }
-
-  deleteText(textPost: string){
-    return textPost = "";
   }
 
 }

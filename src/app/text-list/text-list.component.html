@@ -3,3 +3,7 @@
   <p>{{text.value}}</p>
   <button (click)="saveText(text.value); text.value='Posted and Saved!'">Save Text</button>
 </div>
+
+<div *ngIf="childTexts.total === 0">
+  <h3>Sorry, no results match your search...</h3>
+</div>
