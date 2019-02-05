@@ -1,4 +1,4 @@
 export class VideoPost {
-  constructor(public videoid: string, public title: string){
+  constructor(public videoid: string, public title:string){
   }
 }

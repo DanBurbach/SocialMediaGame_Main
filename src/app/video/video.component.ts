@@ -42,7 +42,7 @@ export class VideoComponent {
       document.getElementById("watch").appendChild(iframe);
     }
 
-  saveVideo(videoId: string, title: string){
+  saveVideo(videoId:string, title:string){
    let newVideoToSave: VideoPost = new VideoPost(videoId, title);
    this.videoFb.addVideo(newVideoToSave);
  }
