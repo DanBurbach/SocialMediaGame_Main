@@ -6,7 +6,7 @@
   <button (click)="getVideo(keyword.value)">Get Videos</button>
 </form>
 
-<div class="displyVideos" *ngFor="let video of videos">
+<!-- <div class="displyVideos" *ngFor="let video of videos">
     <p>kinds: {{video.kind}}</p>
     <p>item: {{video.items}}</p>
     <p>snippet: {{video.items[0].snippet}}</p>
@@ -16,6 +16,15 @@
     </iframe>
     <p>video: {{video.items[0].snippet.thumbnails.default.url}}</p>
     <p>video: {{video.items[0].id.videoId}}</p>
+    <p>video: {{video.items[1].id.videoId}}</p>
+    <p>video: {{video.items[2].id.videoId}}</p>
+</div> -->
 
-
+<div class="displyVideos" *ngFor="let video of videos">
+  <div *ngFor="let info of video">
+      <p>{{info.snippet.title | json}}</p>
+      <p>{{info.id.videoId | json}}</p>
+  </div>
+  <p>{{video[i].snippet.title| json}}</p>
+  <p>{{video[i].id.videoId | json}}</p>
 </div>

@@ -8,5 +8,5 @@ export const masterFirebaseConfig = {
 
 
 export const youtubeAPI = {
-  apiKey = "xxxxx"
+  apiKey: "xxxxx"
 }
