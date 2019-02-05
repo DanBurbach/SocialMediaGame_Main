@@ -1,11 +1,12 @@
 
-<form>
-  <label for="search">Search</label>
-  <input type="text" #imagePostSearch>
-  <button (click)="showImagePosts(imagePostSearch.value)">Get Image Posts</button>
-</form>
+<div class="container">
+  <h1>Images</h1>
+  <form>
+    <input type="text" #imagePostSearch placeholder="Search">
+    <button (click)="showImagePosts(imagePostSearch.value)">Get Image Posts</button>
+  </form>
 
-
-<div *ngIf="images">
-  <app-image-list [childImages]="images"></app-image-list>
+  <div *ngIf="images">
+    <app-image-list [childImages]="images"></app-image-list>
+  </div>
 </div>
