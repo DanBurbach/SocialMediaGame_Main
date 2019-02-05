@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { TextApiService } from '../text-api.service';
 
+
 @Component({
   selector: 'app-text',
   templateUrl: './text.component.html',
