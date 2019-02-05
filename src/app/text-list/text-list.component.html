@@ -1,9 +1,16 @@
+<div class="container">
 
-<div *ngFor="let text of childTexts.result">
-  <p>{{text.value}}</p>
-  <button (click)="saveText(text.value); text.value='Posted and Saved!'">Save Text</button>
-</div>
+  <div *ngFor="let text of childTexts.result">
 
-<div *ngIf="childTexts.total === 0">
-  <h3>Sorry, no results match your search...</h3>
+    <div class="box">
+      <p>{{text.value}}</p>
+      <button (click)="saveText(text.value); text.value='Posted and Saved!'">Save Text</button>
+    </div>
+
+  </div>
+
+  <div *ngIf="childTexts.total === 0">
+    <h3>Sorry, no results match your search...</h3>
+  </div>
+
 </div>
