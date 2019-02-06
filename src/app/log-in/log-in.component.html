@@ -1,11 +1,11 @@
 <body>
-  <ul class="topnav">
-    <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></li>
-    <div class="loginName"*ngIf="isLoggedIn">
-      <li><a>{{userName}}</a></li>
-      <li><a (click)="logout()">Log out</a></li>
-    </div>
-  </ul>
+
+    <nav class="topnav">
+      <div class="nav-color">
+        <a class="navbar-brand" onclick="document.getElementById('id01').style.display='block'">Login</a>
+      </div>
+    </nav>
+
 
 <div id="id01" class="modal">
   <form class="modal-content animate" action="/action_page.php">
