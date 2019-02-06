@@ -1,15 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { BoardService } from '../board.service';
+import { Board } from '../board';
+
+const BOARD_SIZE: number = 6;
 
 @Component({
   selector: 'app-private',
   templateUrl: './private.component.html',
-  styleUrls: ['./private.component.css']
+  styleUrls: ['./private.component.css'],
+  providers: [BoardService]
 })
-export class PrivateComponent implements OnInit {
 
-  constructor() { }
+export class PrivateComponent {
+  title = 'app';
+    constructor( private boardService: BoardService){}
 
-  ngOnInit() {
+
+    createBoards() : PrivateComponent {
+         this.boardService.createBoard(BOARD_SIZE);
+       return this;
+     }
+
+
   }
-
-}

@@ -12,10 +12,6 @@ import { LogInComponent } from './log-in/log-in.component';
 const appRoutes: Routes = [
   {
     path: '',
-    component: PublicComponent
-  },
-  {
-    path: 'app-log-in',
     component: LogInComponent
   },
   {

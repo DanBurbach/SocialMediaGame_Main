@@ -6,23 +6,25 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
 // main import files
-import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { masterFirebaseConfig } from './api-keys';
 import { routing } from './app.routing';
 
-// component import files
-import { PublicComponent } from './public/public.component';
-import { PrivateComponent } from './private/private.component';
-import { ProfileComponent } from './profile/profile.component';
-
 // authorization import files
 import { AuthGuard } from './auth-guard/auth-guard.service';
 import { AuthenticationService } from './authentication/authentication.service';
+
+// component import files
+import { AppComponent } from './app.component';
+import { PublicComponent } from './public/public.component';
+import { PrivateComponent } from './private/private.component';
+import { ProfileComponent } from './profile/profile.component';
 import { LogInComponent } from './log-in/log-in.component';
 import { FeedComponent } from './feed/feed.component';
+import { UiComponent } from './ui/ui.component';
+
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -39,7 +41,8 @@ export const firebaseConfig = {
     PrivateComponent,
     LogInComponent,
     ProfileComponent,
-    FeedComponent
+    FeedComponent,
+    UiComponent
   ],
   imports: [
     BrowserModule,
