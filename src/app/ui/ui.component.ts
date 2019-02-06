@@ -29,6 +29,8 @@ export class UiComponent {
       });
     }
 
+
+
   login() {
     this.authService.login();
   }
@@ -36,5 +38,14 @@ export class UiComponent {
   logout() {
     this.authService.logout();
   }
+
+  myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
 
 }

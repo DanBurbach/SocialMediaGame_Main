@@ -1,21 +1,26 @@
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
-  <nav class="topnav" id="myTopnav">
-    <div class="nav-color">
-      <a class="navbar-brand" href="#">Profile</a>
-      <a class="navbar-brand" href="#">Text</a>
-      <a class="navbar-brand" href="#">Pics</a>
-      <a class="navbar-brand" href="#">Videos</a>
-      <form action="" class="navbar-brand">
-        <input type="search" #imagePostSearch placeholder="Search...">
-        <button class="fa fa-search"></button>
-      </form>
-      <div class="navbar-brand">
-        <div class="loginName"*ngIf="isLoggedIn">
-          <a>{{userName}}</a>
-          <a (click)="logout()">Log out</a>
-        </div>
+  <div class="topnav" id="myTopnav">
+    <a href="#home" class="active">Profile</a>
+    <a href="#text">Text</a>
+    <a href="#pics">Pics</a>
+    <a href="#videos">Videos</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+    <div id="loginname">
+    <a href="#Login Name">
+      <div class="loginName"*ngIf="isLoggedIn">
+        <a>{{userName}}</a>
+        <a (click)="logout()">Log out</a>
       </div>
-    </div>
-  </nav>
+    </a>
+  </div>
+  </div>
 </body>
+
+<!-- <form action="">
+  <input type="search" #textPostSearch placeholder="Search...">
+  <button class="fa fa-search" (click)="showTextPosts(textPostSearch.value)"></button>
+</form> -->
