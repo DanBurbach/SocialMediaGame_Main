@@ -1,18 +1,16 @@
-
-<nav class="navbar">
-  <div class="loginName"*ngIf="isLoggedIn">
-    <nav class="topnav">
-      <div class="nav-color">
-        <a class="navbar-brand" href="#">Profile</a>
-        <a class="navbar-brand" routerLink="app-private/texts">Texts</a>
-        <a class="navbar-brand" routerLink="app-private/images">Images</a>
-        <a class="navbar-brand" routerLink="app-private/videos">Videos</a>
-        <a (click)="logout()">Log out</a>
-      </div>
-    </nav>
-  </div>
-</nav>
-
 <div class="container">
+
+  <nav class="navbar">
+    <div *ngIf="isLoggedIn">
+      <nav class="topnav">
+          <a class="navbar-brand" href="#">Profile</a>
+          <a class="navbar-brand" routerLink="app-private/texts">Texts</a>
+          <a class="navbar-brand" routerLink="app-private/images">Images</a>
+          <a class="navbar-brand" routerLink="app-private/videos">Videos</a>
+          <a (click)="logout()">Log out</a>
+      </nav>
+    </div>
+  </nav>
+
   <router-outlet></router-outlet>
 </div>

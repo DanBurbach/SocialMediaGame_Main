@@ -29,7 +29,6 @@ import { PrivateComponent } from './private/private.component';
 import { ProfileComponent } from './profile/profile.component';
 import { LogInComponent } from './log-in/log-in.component';
 import { FeedComponent } from './feed/feed.component';
-import { UiComponent } from './ui/ui.component';
 import { VideoComponent } from './video/video.component';
 
 //Services
@@ -55,7 +54,6 @@ export const firebaseConfig = {
     LogInComponent,
     ProfileComponent,
     FeedComponent,
-    UiComponent,
     VideoComponent,
     AppComponent
   ],

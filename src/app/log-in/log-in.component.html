@@ -1,10 +1,8 @@
 <body>
 
-    <nav class="topnav">
-      <div class="nav-color">
-        <a class="navbar-brand" onclick="document.getElementById('id01').style.display='block'">Login</a>
-      </div>
-    </nav>
+<nav class="topnav">
+  <a class="navbar-brand" onclick="document.getElementById('id01').style.display='block'">Login</a>
+</nav>
 
 
 <div id="id01" class="modal">
@@ -17,42 +15,21 @@
       <div class="container">
         <form action="/action_page.php">
           <div class="row">
-            <h2 style="text-align:center">Login with Social Media or Manually</h2>
+            <h2 style="text-align:center">Login</h2>
 
             <div class="col">
               <div class="login">
-                <a href="#" class="fb btn">
-                  <i class="fa fa-facebook fa-fw"></i> Login with Facebook
-                </a>
-
-                <a href="#" class="twitter btn">
-                  <i class="fa fa-twitter fa-fw"></i> Login with Twitter
-                </a>
-
                 <a href="#" class="google btn" (click)="login()"><i class="fa fa-google fa-fw">
                   </i> Login with Google+
                 </a>
               </div>
             </div>
-
-              <div class="col">
-                <div class="hide-md-lg">
-                  <p>Or sign in manually:</p>
-                </div>
-                <div class="form-group">
-                  <input type="text" name="username" placeholder="Username" required>
-                  <input type="password" name="password" placeholder="Password" required>
-                  <input type="submit" alue="Login">
-                </div>
-              </div>
-
           </div>
         </form>
       </div>
 
       <div class="container" style="background-color:#f1f1f1">
         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <span class="psw">Forgot <a href="#">password?</a></span>
       </div>
     </form>
   </div>

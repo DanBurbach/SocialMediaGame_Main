@@ -1,7 +1,8 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-<div class="container">
-    <h1>Text</h1><br/>
+
+    <h1>Texts</h1><br/>
+    <br>
   <form action="">
     <input type="search" #textPostSearch placeholder="Search...">
     <button class="fa fa-search" (click)="showTextPosts(textPostSearch.value)"></button>
@@ -11,5 +12,3 @@
   <div *ngIf="texts">
     <app-text-list [childTexts]="texts"></app-text-list>
   </div>
-
-</div>

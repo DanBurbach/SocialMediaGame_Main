@@ -1,7 +1,8 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-<div class="container">
-  <h1>Video Feeds</h1><br/>
+
+  <h1>Videos</h1><br/>
+  <br>
   <form action="">
     <input type=text #keyword type="search" placeholder="Search...">
     <button class="fa fa-search" (click)="getVideo(keyword.value)"></button>
@@ -15,15 +16,9 @@
   <!-- <div class="grid" *ngFor="let info of video">
   <p>{{info.snippet.title | json}} <button class="btn btn-success" (click)="watchVideo(info.id.videoId)">Watch</button>
   <button  (click)="saveVideo(info.id.videoId,info.snippet.title)"><span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span></button></p> -->
- 
-
-
-
 
     </div>
   </div>
 
   <div id="watch">
   </div>
-
-</div>

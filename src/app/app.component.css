@@ -1,7 +1,8 @@
-.container {
-  padding-top: 30px;
-}
 
+.container {
+  margin: 25px;
+  text-align: center;
+}
 
 .topnav {
   overflow: hidden;
@@ -32,8 +33,4 @@
   float: none;
   display: block;
   text-align: left;
-}
-
-.loginName {
-  float: right;
 }
