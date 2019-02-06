@@ -24,7 +24,13 @@ import { ProfileComponent } from './profile/profile.component';
 import { LogInComponent } from './log-in/log-in.component';
 import { FeedComponent } from './feed/feed.component';
 import { UiComponent } from './ui/ui.component';
+import { VideoComponent } from './video/video.component';
 
+
+
+//Services
+import { YoutubeService} from './youtube.service';
+import { VideoFbService } from './video-fb.service'
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -42,7 +48,8 @@ export const firebaseConfig = {
     LogInComponent,
     ProfileComponent,
     FeedComponent,
-    UiComponent
+    UiComponent,
+    VideoComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +61,7 @@ export const firebaseConfig = {
     RouterModule,
     routing
   ],
-  providers: [AuthGuard, AuthenticationService],
+  providers: [AuthGuard, AuthenticationService,YoutubeService, VideoFbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

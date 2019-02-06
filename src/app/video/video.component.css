@@ -1,0 +1,8 @@
+.displayVideos {
+  /* display: grid;
+  width: inherit;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+  grid-template-rows: max-content auto auto;
+  grid-gap: 0; */
+}
