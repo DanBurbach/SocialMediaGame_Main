@@ -1,17 +1,30 @@
-import { TextComponent } from './text/text.component';
+// angular main import
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ImageComponent } from './image/image.component';
-// import { UserPhotosListComponent } from './user-photos-list/user-photos-list.component';
-// import { PhotosListComponent } from './photos-list/photos-list.component';
+
+// component page routing import
+import { PublicComponent } from './public/public.component';
+import { PrivateComponent } from './private/private.component';
+import { ProfileComponent } from './profile/profile.component';
+import { LogInComponent } from './log-in/log-in.component';
 
 
-
-export const appRoutes: Routes = [
+const appRoutes: Routes = [
   {
     path: '',
-    component: TextComponent
+    component: LogInComponent
+  },
+  {
+    path: 'app-public',
+    component: PublicComponent
+  },
+  {
+    path: 'app-private',
+    component: PrivateComponent
+  },
+  {
+    path: 'app-profile',
+    component: ProfileComponent
   }
-
 ];
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

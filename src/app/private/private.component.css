@@ -1,0 +1,13 @@
+.all {
+  background: white;
+  font-size: 35px;
+  /* background-image: linear-gradient(to right, #F5F5F5 , #D3D3D3); */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  /* grid-template-rows: max-content 100px; */
+  /* border-bottom: 1px solid #000; */
+  font-size: 35px;
+}
