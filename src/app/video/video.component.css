@@ -4,11 +4,19 @@
 }
 
 .displayVideos {
-  border: 1px solid green;
+  text-align: left;
+  font-size: 15px;
 }
 
 .grid {
-  
+  margin: 10px;
+  padding: 10px;
+  grid-template-rows: max-content(100px, auto);
+  border-bottom: 1px solid grey;
+}
+
+.glyphicon {
+  border: 1px solid green;
 }
 
 form{
