@@ -26,8 +26,6 @@ import { FeedComponent } from './feed/feed.component';
 import { UiComponent } from './ui/ui.component';
 import { VideoComponent } from './video/video.component';
 
-
-
 //Services
 import { YoutubeService} from './youtube.service';
 import { VideoFbService } from './video-fb.service'
