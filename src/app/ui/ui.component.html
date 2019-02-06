@@ -1,11 +1,20 @@
-<nav class="navbar">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+<nav class="topnav">
   <div class="nav-color">
-    <a class="navbar-brand" href="#">Profile</a>
-    <a class="navbar-brand" href="#">Feed</a>
     <a class="navbar-brand" href="#">New Post</a>
-  </div>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <a class="navbar-brand" href="#">Text</a>
+    <a class="navbar-brand" href="#">Pics</a>
+    <a class="navbar-brand" href="#">Videos</a>
+    <form action="" class="navbar-brand">
+      <input type="search" #imagePostSearch placeholder="Search...">
+      <button class="fa fa-search"></button>
     </form>
+    <div class="navbar-brand">
+      <div class="loginName"*ngIf="isLoggedIn">
+        <a>{{userName}}</a>
+        <a (click)="logout()">Log out</a>
+      </div>
+    </div>
+  </div>
 </nav>

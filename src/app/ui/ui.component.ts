@@ -1,15 +1,40 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
+import { AuthenticationService } from '../authentication/authentication.service';
 
 @Component({
   selector: 'app-ui',
   templateUrl: './ui.component.html',
-  styleUrls: ['./ui.component.css']
+  styleUrls: ['./ui.component.css'],
+  providers: [ AuthenticationService ]
 })
-export class UiComponent implements OnInit {
+export class UiComponent {
+  user;
+  private isLoggedIn: Boolean;
+  private userName: String;
 
-  constructor() { }
+  constructor(public authService: AuthenticationService,
+    private router: Router,
+  )
+    {
+      this.authService.user.subscribe(user => {
+        if (user == null) {
+          this.isLoggedIn = false;
+          this.router.navigate(['']);
+        } else {
+          this.isLoggedIn = true;
+          this.userName = user.displayName;
+          this.router.navigate(['app-private']);
+        }
+      });
+    }
 
-  ngOnInit() {
+  login() {
+    this.authService.login();
+  }
+
+  logout() {
+    this.authService.logout();
   }
 
 }
