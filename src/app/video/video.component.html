@@ -11,7 +11,7 @@
   <div class="displayVideos" *ngFor="let video of videos">
     <div *ngFor="let info of video">
       <p>{{info.snippet.title | json}}<button (click)="watchVideo(info.id.videoId)">Watch</button></p>
-      <button (click)="saveVideo(info.id.videoId,info.snippet.title)">Save Videos</button>
+      <button (click)="saveVideo(info.id.videoId,info.snippet.title); info.id.videoId=''; info.snippet.title=''">Save Videos</button>
     </div>
   </div>
 

@@ -8,6 +8,7 @@ import { PrivateComponent } from './private/private.component';
 import { ProfileComponent } from './profile/profile.component';
 import { LogInComponent } from './log-in/log-in.component';
 import { TextComponent } from './text/text.component';
+import { VideoComponent } from './video/video.component';
 
 
 const appRoutes: Routes = [
@@ -30,6 +31,10 @@ const appRoutes: Routes = [
   {
     path: 'app-text',
     component: TextComponent
+  },
+  {
+    path: 'app-video',
+    component: VideoComponent
   }
 ];
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
