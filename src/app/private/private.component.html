@@ -2,6 +2,10 @@
   <app-ui></app-ui>
   <div class="grid">
     <div class="Profile">
+        <div class="loginName"*ngIf="isLoggedIn">
+          <li><a>{{userName}}</a></li>
+          <li><a (click)="logout()">Log out</a></li>
+        </div>
       <app-profile></app-profile>
     </div>
     <div class="feed">

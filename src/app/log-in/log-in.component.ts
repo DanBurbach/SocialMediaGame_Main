@@ -24,7 +24,7 @@ export class LogInComponent {
         } else {
           this.isLoggedIn = true;
           this.userName = user.displayName;
-          this.router.navigate(['app-private']);
+          this.router.navigate(['']);
         }
       });
     }
