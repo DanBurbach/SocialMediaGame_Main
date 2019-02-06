@@ -13,4 +13,7 @@ export class TextFBService {
   addText(newText: TextPost) {
     this.texts.push(newText);
   }
+  getTexts(){
+    return this.texts;
+  }
 }
