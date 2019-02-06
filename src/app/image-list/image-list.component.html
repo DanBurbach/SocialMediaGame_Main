@@ -1,20 +1,17 @@
-<p>
-  image-list works!
-</p>
-<!-- <ul>
-  <li></li>
-  <li>{{childImages.hits[1].largeImageURL}}</li>
-  <li>{{childImages.hits[2].largeImageURL}}</li>
-  <li>{{childImages.hits[3].largeImageURL}}</li>
-  <li>{{childImages.hits[4].largeImageURL}}</li>
-</ul> -->
-<img src="{{childImages.hits[0].webformatURL}}"/>
-<img src="{{childImages.hits[1].webformatURL}}"/>
-<img src="{{childImages.hits[2].webformatURL}}"/>
-<img src="{{childImages.hits[3].webformatURL}}"/>
-<img src="{{childImages.hits[4].webformatURL}}"/>
-<img src="{{childImages.hits[5].webformatURL}}"/>
-<img src="{{childImages.hits[6].webformatURL}}"/>
-<img src="{{childImages.hits[7].webformatURL}}"/>
-<img src="{{childImages.hits[8].webformatURL}}"/>
-<img src="{{childImages.hits[9].webformatURL}}"/>
+<div class="container">
+
+  <div *ngFor="let image of childImages.hits">
+
+    <div class="box">
+      <img src = {{image.webformatURL}}/>
+      <h2>{{image.tags}}</h2>
+      <button (click)="saveImage(image.webformatURL, image.tags); image.webformatURL=''; image.tags='Your photo has been saved and posted!'">Save Image</button>
+    </div>
+
+  </div>
+
+  <div *ngIf="childImages.total === 0">
+    <h3>Sorry, no results match your search...</h3>
+  </div>
+
+</div>

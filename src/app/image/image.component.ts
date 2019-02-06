@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { ImageApiService } from '../image-api.service';
+import {  ImageListComponent } from '../image-list/image-list.component';
 
 @Component({
   selector: 'app-image',
@@ -9,14 +10,14 @@ import { ImageApiService } from '../image-api.service';
   providers: [ ImageApiService]
 })
 export class ImageComponent {
-   images: any[]=null;
+   images: any[];
 
   constructor(private imageApiPosts: ImageApiService) { }
 
   showImagePosts(search: string) {
     this.imageApiPosts.getImagePost(search).subscribe(response => {
         this.images = response.json();
-    })
+    });
 
   }
 
