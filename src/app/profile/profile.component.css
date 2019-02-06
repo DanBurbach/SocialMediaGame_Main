@@ -1,29 +1,21 @@
 .profile {
-  margin-left: 50px;
-  margin-top: 50px;
-  padding: 10px;
+  padding: 5px;
   /* background: lightyellow; */
   /* border: 2px solid black; */
-  position: fixed;
+  position: relative;
 }
 
 .image {
-  margin: 20px;
-  width: 500px;
-  height: 500px;
-  /* background: lightpink; */
-  /* border: 2px solid green; */
+  margin: 5px;
+  width: 100px;
+  height: 100px;
 }
 
 .image-profile {
   width: 100%;
-  height: 496px;
+  max-height: 100px;
 }
 
 .info {
-  margin: 20px;
-}
-
-.h6 {
-  text-transform: capitalize;
+  margin: 5px;
 }
