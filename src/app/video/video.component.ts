@@ -13,10 +13,10 @@ import { VideoFbService } from '../video-fb.service';
 export class VideoComponent {
   videos: any[]= null;
   clickedVideo: null;
+  saved = null;
+  floppy = true;
   constructor(private search: YoutubeService, private videoFb:VideoFbService) { }
 
-
-// gets the API by items
   getVideo(keyword:string){
     this.search.getByKeyword(keyword).subscribe(response => {
       this.videos = response.json().items;
@@ -24,14 +24,6 @@ export class VideoComponent {
       console.log(this.videos);
     });
   }
-
-  // getVideoAll(keyword:string){
-  //   this.search.getByKeyword(keyword).subscribe(response => {
-  //     this.videos = response.json();
-  //     this.videos = Array.of(this.videos);
-  //     console.log(this.videos);
-  //   });
-  // }
 
   watchVideo(info){
     var url = "https://www.youtube.com/embed/" + info;
@@ -43,7 +35,10 @@ export class VideoComponent {
     }
 
   saveVideo(videoId:string, title:string){
-   let newVideoToSave: VideoPost = new VideoPost(videoId, title);
+   let videoLink = "https://www.youtube.com/embed/" + videoId;
+   let newVideoToSave: VideoPost = new VideoPost(videoId, title, videoLink);
    this.videoFb.addVideo(newVideoToSave);
+   // this.saved = true;
+   // this.floppy = null;
  }
 }

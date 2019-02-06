@@ -1,8 +1,10 @@
+
 .container {
-    /* background:  #F5F5F5; */
-  padding-bottom: 30px;
-  /* background-image: linear-gradient(to right, #F5F5F5 , white); */
+  margin: 25px;
+  text-align: center;
 }
+
+
 
 .feed-text {
   margin-top: 50px;

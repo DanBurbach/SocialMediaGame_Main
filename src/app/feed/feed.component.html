@@ -1,4 +1,33 @@
+
 <div class="container">
+  <div *ngFor="let text of texts | async" class="panel panel-default">
+    <div class="panel-body">
+      <h3><em>{{text.textPost}}</em></h3>
+    </div>
+  </div>
+
+  <div *ngFor="let image of images | async" class="panel panel-default">
+    <div class="panel-body">
+      <h3><em>{{image.description}}</em></h3>
+      <img src="{{image.imageURL}}"/>
+    </div>
+  </div>
+
+  <div *ngFor="let video of videos | async" class="panel panel-default">
+    <div class="panel-body">
+      <h3><em>{{video.title}}</em></h3>
+      <iframe src="{{video.url}}" width="500px" height="450px"></iframe>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- <div class="container">
   <h2>Text Only</h2>
   <div class="feed-text">
     <div class="feed-item">
@@ -106,4 +135,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->

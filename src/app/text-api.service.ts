@@ -11,7 +11,6 @@ export class TextApiService {
     // //chuck norris
     return this.http.get(`https://api.chucknorris.io/jokes/search?query=${search}`)
 
-     // return this.http.get(`${search}`)
   }
 
 }

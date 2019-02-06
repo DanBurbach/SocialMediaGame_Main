@@ -12,4 +12,8 @@ export class ImageFBService {
   addImage(newImage: ImagePost) {
     this.images.push(newImage);
   }
+
+  getImages(){
+    return this.images;
+  }
 }
