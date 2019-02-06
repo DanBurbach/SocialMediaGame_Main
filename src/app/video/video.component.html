@@ -1,15 +1,14 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
 <div class="container">
-  <h2>Video Feeds</h2>
-  <form>
-    <div class="form-group">
-      <label for="keyword">Search Videos</label>
-      <input type=text #keyword >
-      <button (click)="getVideo(keyword.value)">Get Videos</button>
-    </div>
+  <h1>Video Feeds</h1><br/>
+  <form action="">
+    <input type=text #keyword type="search" placeholder="Search...">
+    <button class="fa fa-search" (click)="getVideo(keyword.value)"></button>
   </form>
 
   <div class="displayVideos" *ngFor="let video of videos">
-    <div *ngFor="let info of video">
+    <div class="grid" *ngFor="let info of video">
       <p>{{info.snippet.title | json}}<button (click)="watchVideo(info.id.videoId)">Watch</button></p>
       <button (click)="saveVideo(info.id.videoId,info.snippet.title)">Save Videos</button>
     </div>

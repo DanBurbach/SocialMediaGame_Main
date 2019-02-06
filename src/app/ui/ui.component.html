@@ -3,13 +3,13 @@
   <nav class="topnav" id="myTopnav">
     <div class="nav-color">
       <a class="navbar-brand" href="#">Profile</a>
-      <a class="navbar-brand" href="#">Text</a>
-      <a class="navbar-brand" href="#">Pics</a>
-      <a class="navbar-brand" href="#">Videos</a>
-      <form action="" class="navbar-brand">
+      <a class="navbar-brand" routerLink="texts">Text</a>
+      <a class="navbar-brand" routerLink="images">Pics</a>
+      <a class="navbar-brand" routerLink="videos">Videos</a>
+      <!-- <form action="" class="navbar-brand">
         <input type="search" #imagePostSearch placeholder="Search...">
         <button class="fa fa-search"></button>
-      </form>
+      </form> -->
       <div class="navbar-brand">
         <div class="loginName"*ngIf="isLoggedIn">
           <a>{{userName}}</a>
