@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 <body>
   <ul class="topnav">
     <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></li>
@@ -14,13 +18,20 @@
         <img src="/assets/images/avatar-login.png" alt="Avatar" class="avatar">
       </div>
 
+      <div id="socialsignin">
       <div class="container">
         <form action="/action_page.php">
           <div class="row">
             <h2 style="text-align:center">Login with Social Media or Manually</h2>
+          </div>
 
+          <div class="row">
             <div class="col">
               <div class="login">
+                <a href="#" class="google btn" (click)="login()"><i class="fa fa-google fa-fw">
+                  </i> Login with Google+
+                </a>
+
                 <a href="#" class="fb btn">
                   <i class="fa fa-facebook fa-fw"></i> Login with Facebook
                 </a>
@@ -29,12 +40,11 @@
                   <i class="fa fa-twitter fa-fw"></i> Login with Twitter
                 </a>
 
-                <a href="#" class="google btn" (click)="login()"><i class="fa fa-google fa-fw">
-                  </i> Login with Google+
-                </a>
               </div>
             </div>
+          </div>
 
+            <div class="row">
               <div class="col">
                 <div class="hide-md-lg">
                   <p>Or sign in manually:</p>
@@ -45,10 +55,11 @@
                   <input type="submit" alue="Login">
                 </div>
               </div>
-
           </div>
+
         </form>
       </div>
+    </div>
 
       <div class="container" style="background-color:#f1f1f1">
         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
