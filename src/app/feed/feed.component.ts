@@ -6,22 +6,19 @@ import { ImageFBService } from '../image-fb.service';
 import { ImagePost } from '../Models/image-post';
 import { VideoPost } from '../models/video-post';
 import { VideoFbService } from '../video-fb.service';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { SecurityContext } from '@angular/core';
 
 @Component({
   selector: 'app-feed',
   templateUrl: './feed.component.html',
   styleUrls: ['./feed.component.css'],
   providers: [TextFBService, ImageFBService, VideoFbService]
-  // template: <div [src]="_htmlProperty"></div>
 })
 export class FeedComponent implements OnInit{
   texts: FirebaseListObservable<any[]>;
   images: FirebaseListObservable<any[]>;
   videos: FirebaseListObservable<any[]>;
   url;
-  constructor(private textFBService: TextFBService, private imageFBService: ImageFBService, private videoFBService: VideoFbService, private sanitizer: DomSanitizer) { }
+  constructor(private textFBService: TextFBService, private imageFBService: ImageFBService, private videoFBService: VideoFbService ) { }
 
   ngOnInit(){
     this.texts = this.textFBService.getTexts();
