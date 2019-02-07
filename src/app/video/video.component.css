@@ -11,13 +11,16 @@ h1 {
 .displayVideos {
   text-align: left;
   font-size: 15px;
+  padding-left: 80px;
+  padding-right: 80px;
+  font-stretch: extra-expanded;
 }
 
 .grid {
   margin: 10px;
-  padding: 10px;
+  /* padding: 10px; */
   grid-template-rows: max-content(100px, auto);
-  border-bottom: 1px solid grey;
+  /* border-bottom: 1px solid grey; */
 }
 
 .glyphicon {
@@ -82,4 +85,8 @@ form:hover input{
 form:hover .fa{
     background: #07051a;
     color: white;
+}
+
+#watch {
+  margin-top: 10px;
 }
