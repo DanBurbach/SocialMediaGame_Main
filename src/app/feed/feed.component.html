@@ -14,8 +14,19 @@
       <h3><em>{{image.description}}</em></h3>
       <img src="{{image.imageURL}}"/>
       <button type="button" class="btn btn-light" name="button">Comment</button>
-      <button type="button" class="btn btn-light" name="button">Like</button>
-      <button type="button" class="btn btn-light" name="button">DisLike</button>
+      <button class="btn"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></button>
+      <button class="btn"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span></button>
+
     </div>
   </div>
+
+    <div *ngFor="let video of videos | async" class="panel panel-default">
+      <div class="panel-body" id="watch">
+        <h3><em>{{video.title}}</em></h3>
+        <iframe width="650" height="400" [src]="video.url | safe"></iframe>
+        <button type="button" class="btn btn-light" name="button">Comment</button>
+        <button class="btn"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></button>
+        <button class="btn"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span></button>
+      </div>
+    </div>
 </div>

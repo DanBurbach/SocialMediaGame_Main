@@ -13,4 +13,8 @@ export class VideoFbService {
   addVideo(newVideo: VideoPost) {
     this.videos.push(newVideo);
   }
+
+  getVideos(){
+    return this.videos;
+  }
 }

@@ -35,6 +35,9 @@ import { VideoComponent } from './video/video.component';
 import { YoutubeService} from './youtube.service';
 import { VideoFbService } from './video-fb.service'
 
+//Security
+import { SafePipe } from './safe.pipe';
+
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
   authDomain: masterFirebaseConfig.authDomain,
@@ -55,7 +58,8 @@ export const firebaseConfig = {
     ProfileComponent,
     FeedComponent,
     VideoComponent,
-    AppComponent
+    AppComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,
