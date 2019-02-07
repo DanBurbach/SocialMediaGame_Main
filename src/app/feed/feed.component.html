@@ -12,13 +12,10 @@
       <img src="{{image.imageURL}}"/>
     </div>
   </div>
-  <!-- <iframe src="{{url?.changingThisBreaksApplicationSecurity}}" width="300" height="100"></iframe> -->
-  <!-- <div id="watch" [class]="showVideo(url)"></div> -->
 
   <div *ngFor="let video of videos | async" class="panel panel-default">
     <div class="panel-body" id="watch">
       <h3><em>{{video.title}}</em></h3>
-      <h3><em>{{video.url}}</em></h3>
       <iframe width="650" height="400" [src]="video.url | safe"></iframe>
     </div>
   </div>
