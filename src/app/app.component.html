@@ -1,23 +1,12 @@
 <div class="container">
-
     <div *ngIf="isLoggedIn">
       <ul class="topnav">
           <li><a class="navbar-brand" href="#">Profile</a></li>
           <li><a class="navbar-brand" routerLink="app-private/texts">Texts</a></li>
           <li><a class="navbar-brand" routerLink="app-private/images">Images</a></li>
           <li><a class="navbar-brand" routerLink="app-private/videos">Videos</a></li>
-          <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          </a> -->
           <li><a (click)="logout()" id="log-out" routerLink="">Log out</a></li>
       </ul>
     </div>
-<<<<<<< HEAD
-
-
   <router-outlet></router-outlet>
-
-=======
-    <router-outlet></router-outlet>
->>>>>>> b16435bc83a7ee6acb34e583d579e48f24fe7a03
 </div>
