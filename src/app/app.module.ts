@@ -10,7 +10,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { routing } from './app.routing';
 
 // authorization import files
-import { AuthGuard } from './auth-guard/auth-guard.service';
+//import { AuthGuard } from './auth-guard/auth-guard.service';
 import { AuthenticationService } from './authentication/authentication.service';
 
 // component import files
@@ -24,7 +24,7 @@ import { ImageListComponent } from './image-list/image-list.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { PublicComponent } from './public/public.component';
+// import { PublicComponent } from './public/public.component';
 import { PrivateComponent } from './private/private.component';
 import { ProfileComponent } from './profile/profile.component';
 import { LogInComponent } from './log-in/log-in.component';
@@ -52,7 +52,7 @@ export const firebaseConfig = {
     TextListComponent,
     ImageComponent,
     ImageListComponent,
-    PublicComponent,
+    // PublicComponent,
     PrivateComponent,
     LogInComponent,
     ProfileComponent,
@@ -71,7 +71,8 @@ export const firebaseConfig = {
     RouterModule,
     routing
   ],
-  providers: [AuthGuard, AuthenticationService,YoutubeService, VideoFbService],
+ //AuthGuard, removed from providers below:
+  providers: [ AuthenticationService,YoutubeService, VideoFbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
