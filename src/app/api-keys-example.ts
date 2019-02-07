@@ -10,3 +10,7 @@ export const masterFirebaseConfig = {
 export const youtubeAPI = {
   apiKey: "xxxxx"
 }
+
+export const pixabayApi = {
+  apiKey: "xxxxxx"
+};
