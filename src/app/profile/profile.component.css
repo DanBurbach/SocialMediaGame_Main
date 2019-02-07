@@ -1,20 +1,21 @@
 .profile {
-  margin-top: 30px;
+  margin-top: 9px;
   padding: 20px;
-  background: lightyellow;
-  border: 2px solid black;
+  /* background: lightyellow;
+  border: 2px solid black; */
   position: relative;
 }
 
 .image {
   margin: 1px;
-  width: 230px;
-  height: 230px;
+  width: 250px;
+  height: 250px;
 }
 
 .image-profile {
   width: 100%;
-  max-height: 230px;
+  max-height: 250px;
+  border: 2px solid black;
 }
 
 .info {
