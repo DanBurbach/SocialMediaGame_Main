@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'lazer84';
+  src: url('/assets/font/Lazer84.ttf') format('truetype'),
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
