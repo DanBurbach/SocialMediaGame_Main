@@ -5,6 +5,7 @@
 }
 
 .topnav {
+  border-radius: 25px;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -23,7 +24,8 @@
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  border-radius: 25px;
+  background-color: #07051a;
   color: black;
 }
 

@@ -4,7 +4,7 @@
   font-size: 18px;
   font-style: italic;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 .box {

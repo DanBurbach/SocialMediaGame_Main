@@ -12,6 +12,7 @@ input[type=text], input[type=password] {
 
 /* top navigation bar for login page =========================== */
 .topnav {
+  border-radius: 25px;
   overflow: hidden;
   background-color: #333;
 }
@@ -27,6 +28,7 @@ input[type=text], input[type=password] {
 }
 
 .topnav a:hover {
+  border-radius: 25px;
   background-color: #ddd;
   color: black;
 }

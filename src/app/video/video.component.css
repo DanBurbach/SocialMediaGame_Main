@@ -3,6 +3,11 @@
   text-align: center;
 }
 
+h1 {
+  font-size: 77px;
+  font-weight: lighter;
+}
+
 .displayVideos {
   text-align: left;
   font-size: 15px;
