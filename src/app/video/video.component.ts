@@ -28,17 +28,17 @@ export class VideoComponent {
   watchVideo(info){
     var url = "https://www.youtube.com/embed/" + info;
     var iframe = document.createElement('iframe');
-      iframe.width="500px";
-      iframe.height="450px";
-      iframe.setAttribute("src", url);
-      document.getElementById("watch").appendChild(iframe);
-    }
+    iframe.width="500px";
+    iframe.height="450px";
+    iframe.setAttribute("src", url);
+    document.getElementById("watch").appendChild(iframe);
+  }
 
   saveVideo(videoId:string, title:string){
-   let videoLink = "https://www.youtube.com/embed/" + videoId;
-   let newVideoToSave: VideoPost = new VideoPost(videoId, title, videoLink);
-   this.videoFb.addVideo(newVideoToSave);
-   // this.saved = true;
-   // this.floppy = null;
- }
+    let videoLink = "https://www.youtube.com/embed/" + videoId;
+    let newVideoToSave: VideoPost = new VideoPost(videoId, title, videoLink);
+    this.videoFb.addVideo(newVideoToSave);
+    // this.saved = true;
+    // this.floppy = null;
+  }
 }
