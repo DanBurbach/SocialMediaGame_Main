@@ -1,15 +1,11 @@
-<div class="container">
-
+<div class="imageDisplay">
   <div *ngFor="let image of childImages.hits">
-
     <div class="box">
       <img src = {{image.webformatURL}}/>
       <h2>{{image.tags}}</h2>
       <button (click)="saveImage(image.webformatURL, image.tags); image.webformatURL=''; image.tags='Your photo has been saved and posted!'">Save Image</button>
     </div>
-
   </div>
-
   <div *ngIf="childImages.total === 0">
     <h3>Sorry, no results match your search...</h3>
   </div>
