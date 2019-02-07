@@ -27,27 +27,5 @@ export class FeedComponent implements OnInit{
     this.texts = this.textFBService.getTexts();
     this.images = this.imageFBService.getImages();
     this.videos = this.videoFBService.getVideos();
-    const videoList = this.videoFBService.getVideos().map(videos => {
-      return videos;
-    })
-    videoList.subscribe(videos => {console.log(videos);
-    let tempUrl = videos[0].url;
-    // this.url = this.sanitizer.bypassSecurityTrustResourceUrl(tempUrl);
-    this.url = tempUrl
-
-    console.log(this.url);})
-  }
-
-  showVideo(id) {
-    let url = id;
-    let iframe = document.createElement('iframe');
-      iframe.width="500px";
-      iframe.height="450px";
-      iframe.setAttribute("src", url);
-      document.getElementById("watch").appendChild(iframe);
-  }
-
-  showUrl(url) {
-    let show = "src=" + url;
   }
 }
