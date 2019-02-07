@@ -1,19 +1,22 @@
 .profile {
-  padding: 2px;
-  /* background: lightyellow; */
-  /* border: 2px solid black; */
+  margin-top: 9px;
+  padding: 20px;
+  /* background: lightyellow;
+  border: 2px solid black; */
   position: relative;
 }
 
 .image {
   margin: 1px;
-  width: 230px;
-  height: 230px;
+  width: 250px;
+  height: 250px;
 }
 
 .image-profile {
   width: 100%;
-  max-height: 230px;
+  max-height: 250px;
+  border: 2px solid black;
+  /* border-radius: 50%; */
 }
 
 .info {

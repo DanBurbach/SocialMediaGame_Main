@@ -1,5 +1,44 @@
 
 .container {
-  margin: 25px;
+  /* margin: 5px; */
+  padding-top: 30px;
   text-align: center;
+}
+
+.group  {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.btn{
+  font-size: 13px;
+}
+.btn:hover{
+  background: #383;
+}
+
+#red:hover {
+  background-color: #ff4d4d;
+}
+
+#comment:hover {
+  background-color: #ffff4d;
+}
+
+#green:hover {
+  background-color: #53c68c;
+}
+
+img {
+  margin-top: 15px;
+}
+
+iframe {
+  margin-top: 15px;
+}
+
+h3 {
+  font-weight: lighter;
+  font-stretch: extra-expanded;
+  text-decoration-style:
 }
