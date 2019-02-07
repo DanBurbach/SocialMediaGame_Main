@@ -11,7 +11,7 @@
   <div class="displayVideos" *ngFor="let video of videos">
     <div class="grid" *ngFor="let info of video">
       <p>{{info.snippet.title | json}} <button class="btn btn-success" (click)="watchVideo(info.id.videoId)">Watch</button>
-        <button *ngIf="floppy" (click)="saveVideo(info.id.videoId,info.snippet.title); info.snippet.title='Your video has been saved and posted!'; info.id.videoId=''"><span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span></button>
+        <button class="btn btn-info" *ngIf="floppy" (click)="saveVideo(info.id.videoId,info.snippet.title); info.snippet.title='Your video has been saved and posted!'; info.id.videoId=''">Post</button>
         <!-- <button *ngIf="saved"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button> -->
       </p>
     </div>
